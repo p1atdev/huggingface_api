@@ -15,3 +15,5 @@ jobs:
       # test
       - name: run the test
         run: deno task test
+        env:
+          HF_READ_TOKEN: ${{ secrets.HF_READ_TOKEN }}
