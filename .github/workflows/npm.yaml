@@ -34,9 +34,9 @@ jobs:
         id: get_tag_version
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            echo "::set-output name=tag::${{ github.event.inputs.tag }}"
+            echo "name=${{ github.event.inputs.tag }}" >> $GITHUB_OUTPUT
           elif [ "${{ github.event_name }}" = "release" ]; then
-            echo "::set-output name=tag::${{ github.event.release.tag_name }}"
+            echo "name=${{ github.event.release.tag_name }}" >> $GITHUB_OUTPUT
           fi
 
       # Setup deno
