@@ -21,6 +21,9 @@ await build({
             type: "git",
             url: "git+https://github.com/p1atdev/huggingface_api",
         },
+        publishConfig: {
+            registry: "https://npm.pkg.github.com/p1atdev",
+        },
     },
     compilerOptions: {
         lib: ["DOM"],
