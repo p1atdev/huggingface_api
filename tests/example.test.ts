@@ -1,4 +1,4 @@
-import { HFAPIClient } from "../src/mod.ts"
+import { HFAPIClient } from "../mod.ts"
 import { assertEquals } from "./deps.ts"
 import { Secret } from "./secret.ts"
 

@@ -1,11 +1,11 @@
-import { HFAPIClient, HFUser } from "../src/mod.ts"
+import { HFAPIClient, HFUser } from "../mod.ts"
 import { assert, assertExists, assertRejects } from "./deps.ts"
 import { Secret } from "./secret.ts"
 
 // wait for a random sec to avoid rate limit
 const wait = async () => {
     await new Promise((resolve) => {
-        setTimeout(resolve, Math.random() * 1000)
+        setTimeout(resolve, Math.random() * 3000)
     })
 }
 

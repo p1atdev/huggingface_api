@@ -1,0 +1,16 @@
+name: Publish npm package to github package
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      # Setup deno
+      - uses: denoland/setup-deno@v1
+        with:
+          deno-version: v1.x
+
+      # test
+      - name: run testing
+        run: deno task test
