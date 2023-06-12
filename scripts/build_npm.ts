@@ -13,7 +13,7 @@ await build({
     test: false,
     package: {
         // package.json properties
-        name: "huggingface_api",
+        name: "@p1atdev/huggingface_api",
         version: Deno.args[0],
         description: "HuggingFace API client.",
         license: "MIT",
