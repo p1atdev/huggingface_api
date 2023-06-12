@@ -1,9 +1,10 @@
-name: Publish npm package to github package
+name: Test
 on: push
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: testing
     steps:
       - uses: actions/checkout@v3
       # Setup deno
@@ -12,5 +13,5 @@ jobs:
           deno-version: v1.x
 
       # test
-      - name: run testing
+      - name: run the test
         run: deno task test
