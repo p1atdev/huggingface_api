@@ -88,6 +88,6 @@ export class HFAPIClient {
     fetch = async <T>(path: string, options?: RequestInit): Promise<T> => {
         const res = await this.fetchRaw(path, options)
 
-        return res.json()
+        return (await res.json()) as T
     }
 }
