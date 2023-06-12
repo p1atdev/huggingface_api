@@ -40,7 +40,7 @@ Deno.test("whoami with accessToken passed after initialized", async () => {
 
     await wait()
 
-    client.login({
+    await client.login({
         accessToken: Secret.HF_READ_TOKEN,
     })
 
